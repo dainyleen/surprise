@@ -17,4 +17,9 @@ function getTime() {
   return `${hh}:${mm}:${ss}`
 }
 
-setInterval(() => clockSection.textContent = getTime(), 1000)
+function tickClock() {
+  clockSection.textContent = getTime()
+}
+
+tickClock()
+setInterval(tickClock, 1000)
