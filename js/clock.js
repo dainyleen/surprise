@@ -8,4 +8,15 @@ function getTime() {
       return number
     }
   }
+
+  const now = new Date()
+  const hh = pad(now.getHours())
+  const mm = pad(now.getMinutes())
+  const ss = pad(now.getSeconds())
+
+  return `${hh}:${mm}:${ss}`
+}
+
+function tickClock() {
+  clockSection.textContent = getTime()
 }
